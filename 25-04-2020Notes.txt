@@ -1,0 +1,105 @@
+Array Destruction:
+- Destruction is the process that allows to access the elements from array and store in the reference of variables.
+
+Ex:  Without Destruction Technique
+
+let products:string[] = ["Samsung TV", "MI Mobile"];
+let tv:string = values[0];
+let mobile:string = values[1];
+
+Ex: Using Destruction Technique
+
+let products:string[] = ["Samsung TV", "MI Mobile"];
+let [tv, mobile] = products;
+console.log(`TV=${tv} \n Mobile=${mobile}`);
+
+
+	Reading Values from an Array
+	===========================
+	
+ function		description
+------------------------------------------------
+ toString()		It can read all values and return
+		as string with "," delimiter.
+
+Ex:
+let products:string[] = ["Samsung TV", "MI Mobile"];
+console.log(products.toString());
+
+ join()		It can read all values and return
+		as tring with user defined 
+		delimiter.
+
+Ex:
+let products:string[] = ["Samsung TV", "MI Mobile"];
+console.log(products.join("-->"));
+
+ find()		It can search the array for any
+		value by using the given 		condition and return the first
+		occurance value that matches 				the condition.
+
+Ex:
+let productsPrice:number[] = [43000.44, 23000.44, 5000.30, 50000.50, 4000.50];
+
+function Search(price) {
+    return price<=10000;
+}
+
+let result:number = productsPrice.find(Search)
+console.log(`Returned Value : ${result}`);
+
+
+ filter()		It is similar to find but, it can
+		return all values that are 				matching with condition 				specified. It returns an array.
+
+Ex:
+let productsPrice:number[] = [43000.44, 23000.44, 5000.30, 50000.50, 4000.50];
+
+function Search(price) {
+    return price<=10000;
+}
+
+let result:number[] = productsPrice.filter(Search)
+console.log(`Returned Value : ${result.toString()}`);
+
+Ex:
+let productsPrice:number[] = [43000.44, 23000.44, 5000.30, 50000.50, 4000.50];
+
+let result:number[] = productsPrice.filter(function(price){
+    return price>=10000;
+})
+console.log(`Returned Value : ${result.toString()}`);
+
+ for...in 		It is an iterator that returns
+		all properties of an array. Based
+		on properties you can access
+		values.
+
+Ex:
+let products:string[] = ["TV", "Mobile", "Shoe"];
+
+for(var property in products) {
+    console.log(`${property} : ${products[property]}`);
+}
+
+ for...of  		It is an iterator uses to read
+		all values from a collection.
+
+Ex:
+let products:string[] = ["TV", "Mobile", "Shoe"];
+
+for(var value of products){
+    console.log(value);
+}
+
+ for        		It creates a loop for reading
+		values based on initialization,
+		condition and counter.
+
+Ex:
+let products:string[] = ["TV", "Mobile", "Shoe"];
+
+for(var i=0; i<products.length; i++) {
+    console.log(products[i]);
+}
+
