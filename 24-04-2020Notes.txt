@@ -1,0 +1,55 @@
+TypeScript Primitive Data Types
+1. number
+2. string
+3. boolean
+4. null 
+5. undefined
+
+TypeScript Non Primitive Types
+- Non Primitive types are stored in memory heap.
+- Heap is the computers cache memory.
+- The size of memory varies according to browser and device.
+- They don't have any fixed range for value.
+- The value range will vary according to Browser and device.
+- They are stored and accessed by a reference in memory i.e not directly stored in memory, they are allocate with a reference in memory.
+- The typescript non-primitive types are
+	1. Array
+	2. Object
+	3. Regular Expression
+	
+
+	            Array Type
+- Arrays are used in computer programming to
+	a) Reduce Overhead
+	b) Reduce Complexity
+- Array reduces overhead by storing values in sequential order.
+- Array reduces complexity by storing many value under one name.
+- Array is a collection of values.
+- Array can store various type of value.
+- Array size can be changed dynamically.
+- TypeScript Array can be restricted to store similar type of value or various types of values.
+- TypeScript Array size can be changed dynamically.
+- TypeScript Array can have the behavior of a collection like stack, queue or any dictionary type.
+
+Delaring and Initializing Array in TypeScript:
+- Array is declared by using the meta character "[ ]".
+	   ?	zero or one occurance
+	   +	one or more occurances
+	   *	zero or more occurances
+	   [ ]	range , min and max
+
+Syntax:
+	let variableName:dataType[];
+
+- Array must be initialized with memory. only declaration is not enough.
+- Memory for array is initialized by using 
+	a) Meta Character   	 [ ]
+	b) Array Constructor  Array()
+
+Syntax:
+	let variableName:dataType[] = [ ];
+	let variableName:dataType[] = new Array();
+
+- Meta Character "[ ]" allows a Tuple, if data type is "any" type then it allows to store different types of value.
+
+- Array Constructor will not allow to store different types of values even when the data type is "any".
